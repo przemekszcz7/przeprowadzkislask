@@ -1,0 +1,6 @@
+{
+  "name": "Przeprowadzki Śląsk",
+  "description": "Profesjonalne, bezpieczne i kompleksowe przeprowadzki na terenie Śląska. Doświadczona ekipa, szybki transport i konkurencyjne ceny.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
