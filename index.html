@@ -105,6 +105,21 @@
         cursor: pointer;
         border: 2px solid transparent;
         gap: 0.5rem;
+        white-space: nowrap;
+      }
+
+      @media (max-width: 480px) {
+        .btn {
+          padding: 0.85rem 1.25rem;
+          font-size: 0.95rem;
+          width: 100%;
+          box-sizing: border-box;
+        }
+        .hero-actions {
+          flex-direction: column;
+          width: 100%;
+          gap: 0.75rem;
+        }
       }
 
       .btn-primary {
@@ -407,9 +422,11 @@
       }
 
       .section-header h2 {
-        font-size: clamp(2rem, 4vw, 2.75rem);
+        font-size: clamp(1.65rem, 5vw, 2.75rem);
         color: var(--text-color);
         margin-bottom: 1.25rem;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
       }
 
       .section-header .divider {
@@ -528,6 +545,10 @@
         line-height: 1.3;
       }
 
+      .show-on-mobile {
+        display: none !important;
+      }
+
       @media (max-width: 1024px) {
         .about-grid {
           grid-template-columns: 1fr;
@@ -539,12 +560,48 @@
           margin: 0 auto;
           width: 100%;
         }
+        .hide-on-mobile {
+          display: none !important;
+        }
+        .show-on-mobile {
+          display: block !important;
+        }
+        .about-experience-tag {
+          bottom: 1.25rem;
+          left: 1.25rem;
+          right: 1.25rem;
+          padding: 1rem 1.25rem;
+          gap: 1rem;
+          border-radius: 1rem;
+        }
+        .about-experience-num {
+          font-size: 2.25rem;
+        }
+        .about-experience-txt {
+          font-size: 0.85rem;
+          line-height: 1.2;
+        }
       }
 
       @media (max-width: 580px) {
         .about-highlights {
           grid-template-columns: 1fr;
           gap: 1rem;
+        }
+        .about-experience-tag {
+          bottom: 0.75rem;
+          left: 0.75rem;
+          right: 0.75rem;
+          padding: 0.75rem 1rem;
+          gap: 0.75rem;
+          border-radius: 0.75rem;
+        }
+        .about-experience-num {
+          font-size: 1.75rem;
+        }
+        .about-experience-txt {
+          font-size: 0.8rem;
+          line-height: 1.2;
         }
       }
 
@@ -743,15 +800,33 @@
         border-radius: 1.5rem;
         border-left: 5px solid var(--accent);
         box-shadow: var(--card-shadow);
+        overflow: hidden;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+      }
+
+      @media (max-width: 768px) {
+        .stat-card {
+          padding: 1.75rem 1.5rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .stat-card {
+          padding: 1.25rem 1rem;
+          border-radius: 1rem;
+        }
       }
 
       .stat-value {
         font-family: var(--font-display);
-        font-size: 3rem;
+        font-size: clamp(1.8rem, 8vw, 3rem);
         font-weight: 800;
         color: var(--text-color);
         margin-bottom: 0.5rem;
         line-height: 1;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
       }
 
       .stat-label {
@@ -1169,7 +1244,7 @@
                 </div>
               </div>
 
-              <a href="#kontakt" class="btn btn-outline">Skontaktuj się</a>
+              <a href="#kontakt" class="btn btn-outline hide-on-mobile">Skontaktuj się</a>
             </div>
             
             <div class="about-image-wrapper">
@@ -1178,6 +1253,10 @@
                 <div class="about-experience-num">100%</div>
                 <div class="about-experience-txt">Bezpieczeństwa<br>i Profesjonalizmu</div>
               </div>
+            </div>
+
+            <div class="show-on-mobile" style="margin-top: 2.5rem; text-align: center; width: 100%;">
+              <a href="#kontakt" class="btn btn-outline" style="display: inline-flex; justify-content: center; align-items: center;">Skontaktuj się</a>
             </div>
           </div>
         </div>
